@@ -4,7 +4,10 @@ import { renderProject } from "./ui";
 let projectArr = [];
 
 function load() {
+  if (localStorage.getItem("projectArr") == null)
+    localStorage.setItem("projectArr", "[]");
   let projectArrSaved = JSON.parse(localStorage.getItem("projectArr"));
+  console.log(projectArrSaved);
   projectArrSaved.forEach((e) => {
     console.log(e);
     var parsed = projects(e.name, e.description);
@@ -61,7 +64,6 @@ function checkTask(project, name, date) {
 
 function pushToPrAr(newP) {
   projectArr.push(newP);
-  console.log(projectArr); // tester
   save();
 }
 
