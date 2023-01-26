@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="styles.scss"> -->
+    <title>To-Do List</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <section id="header">
+      <h1 class="title">TO-DO LIST</h1>
+    </section>
+    <section id="sidebar">
+      <div class="current">
+        <h2 class="my-projects-title">mY PROJECTS</h2>
+        <div class="project-container"></div>
+      </div>
+      <div class="new">
+        <label for="name"
+          ><button class="newbtn">aDD a nEW PROJECT</button></label
+        >
+        <form action="" method="post" class="new-form">
+          <div>
+            <label style="display: block" for="name">naMe:</label>
+            <input name="name" type="text" id="name" maxlength="15" />
+            <label for="description">dESCRIPTIOn:</label>
+            <textarea
+              rows="5"
+              cols="30"
+              name="description"
+              class="description"
+              id="description"
+              maxlength="40"
+            ></textarea>
+            <button type="button" class="confirm">CONFIRM</button>
+            <button type="button" class="cancel">CANCEL</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <div class="main-container">
+      <section id="main">
+        <div class="project-desc">
+          <div class="main-name"></div>
+          <div class="main-description"></div>
+        </div>
+        <div class="task-container"></div>
+      </section>
+    </div>
+  </body>
+</html>
